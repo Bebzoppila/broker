@@ -1,0 +1,439 @@
+@import './fonts/stylesheet.css';
+@import './normal.css';
+*
+    padding: 0px
+    margin: 0px
+    font-family: 'Poppins', sans-serif
+img
+    max-width: 100%
+.container
+    max-width: 1240px
+    margin: 0 auto
+.header
+    padding-top: 16px
+    &-info
+        display: flex
+        gap: 24px
+        &__title
+            font-size: 24px
+            color: #2B3048
+            font-weight: 400
+            line-height: 28px
+        &__subtitle
+            font-size: 14px
+            font-weight: 400
+            color: #5B617C
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        &__text
+            font-size: 14px
+            color: #5B617C
+            font-weight: 400
+            margin-bottom: 12px
+        &__cards
+            display: flex
+            gap: 24px
+            align-items: center
+.text-blue
+    color: #007FEA
+.main
+    margin-top: 60px
+    position: relative
+    padding-bottom: 40px
+    height: 490px
+    &__bg
+        position: absolute
+        left: 43%     
+        top: -22%
+        z-index: -1   
+    &__content
+        max-width: 680px
+    &__title
+        margin: 16px 0px 40px
+        font-size: 44px
+        font-weight: 700
+        color: #2B3048
+    &__subtitle
+        font-size: 24px
+        font-weight: 400
+        line-height: 36px
+    &__menu
+        display: flex
+        margin-top: 24px
+        align-items: center
+        gap: 40px
+    &__load
+        margin-top: 12px
+        display: flex
+        align-items: center
+        gap: 8px
+        &-text
+            font-size: 14px
+            font-weight: 400
+            color: #5B617C
+.btn
+    padding:  16px 32px
+    background-color: #007FEA
+    font-size: 24px
+    outline: none
+    cursor: pointer
+    color: #fff
+    font-weight: 400
+    border: 0px
+    border-radius: 10px
+    transition: all 0.2s
+    &:hover, &:active
+        background-color: #0058A1
+.link-btn
+    color: #007FEA
+    font-size: 24px
+    border: 0px
+    background-color: transparent
+    cursor: pointer
+    border-bottom: 1px solid #007FEA
+    transition: all 0.2s
+    &:hover, &:active
+        color: #1300EA
+        
+.manual
+    padding: 100px 0px 
+    background-color: #F6F7FA
+    &__inner
+        display: flex
+        justify-content: space-between
+    &-content
+        max-width: 654px
+        &__title
+            font-size: 32px
+            color: #2B3048
+        &__list
+            margin-top: 48px
+        &__warning
+            margin-top: 60px
+    &-form
+        max-width: 505px
+        height: 100%
+        min-width: 414px
+.list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-left: 20px
+    &__item
+        flex: 0 1 40%
+        margin-top: 28px
+        padding-left: 16px
+        color: #2B3048
+        font-weight: 500
+        font-size: 24px
+        &::marker
+            color: #007FEA
+            font-weight: 700
+            font-size: 24px
+.warning
+    padding: 44px 60px
+    border: 1px solid #FFA800
+    border-radius: 10px
+    max-width: 580px
+    &__title
+        font-size: 32px
+        font-weight: 700
+        color: #FFA800
+        margin-bottom: 16px
+    &__text
+        font-size: 24px
+        color: #2B3048
+        font-weight: 600
+        max-width: 480px
+.form
+    max-width: 505px
+    padding: 40px 60px
+    box-shadow: 0px 4px 7px rgba(121, 126, 147, 0.06)
+    border: 1px solid #CBD0E8
+    display: flex
+    align-items: center
+    flex-direction: column
+    height: 494px
+    border-radius: 10px
+    max-height: 100%
+    &__title
+        font-size: 32px
+        font-weight: 700
+        color: #007FEA
+        text-align: center
+        margin-bottom: 32px
+    &__item + &__item
+        margin-top: 20px
+    &__item
+        width: 100%
+        display: flex
+        flex-direction: column
+        &-label
+            margin-bottom: 8px
+            font-size: 16px
+            font-weight: 400
+            color: #5B617C
+        &-input
+            padding: 10px 12px
+            font-size: 14px
+            color: #5B617C
+            border-radius: 10px
+            outline: none
+            border: 1px solid #A5AABE
+            font-weight: 400
+            background-color: #F6F7FA
+            font-weight: 600
+            color: #5B617C
+            &:focus
+                color: #2B3048
+                font-weight: 600
+
+    &__btn
+        margin-top: 60px
+.select
+    position: relative
+    &__active
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 12px
+        border: 1px solid #A5AABE
+        background-color: #F6F7FA
+        border-radius: 10px
+        &-text
+            color: #5B617C
+            font-weight: 600
+            &--default
+                font-size: 14px
+                color: #5B617C
+                font-weight: 400
+    &__options
+        position: absolute
+        background-color: #fff
+        z-index: 1
+        list-style-type: none
+        left: 0px
+        right: 0px
+        border-radius: 10px
+        top: 108%
+        max-height: 0px
+        overflow: hidden
+        transition: all 0.4s
+    &__options--active
+        max-height: 400px
+        padding: 10px 0px
+        overflow: auto
+        box-shadow: 0px 4px 15px rgba(95, 100, 123, 0.34)
+    &__option
+        padding: 10px 28px
+        cursor: pointer
+        color: #2B3048
+        &:hover
+            background-color: #F0F1F8
+.questions
+    padding: 80px 0px
+    background-color: #2B3048
+    &__inner
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        font-size: 44px
+        font-weight: 600
+        color: #fff
+        margin-bottom: 20px
+    &__subtitle
+        color: #fff
+        margin-bottom: 40px
+        font-size: 18px
+        font-weight: 500
+.footer
+    padding: 100px 0px
+    background-color: #5B617C
+    &__inner
+        display: flex
+        color: #fff
+        justify-content: space-between
+    &-info
+        max-width: 475px
+        &__title
+            font-size: 24px
+            font-weight: 400
+            margin-bottom: 12px
+        &__text
+            font-size: 12px
+            font-weight: 400
+            line-height: 20px
+            margin-bottom: 12px
+        &__link
+            font-size: 12px
+            font-weight: 400
+            color: #fff
+            letter-spacing: 1.2px
+    &-data
+        max-width: 417px
+        text-align: right
+        &__phone
+            font-size: 33px
+            display: block
+            color: #fff
+            margin-bottom: 12px
+            text-decoration: none
+        &__help
+            font-size: 16px
+            font-weight: 400
+            margin-bottom: 32px
+            display: inline-block
+        &__personal
+            font-size: 12px
+            line-height: 20px
+            letter-spacing: 1.2px
+            font-weight: 400
+.modal
+    position: fixed
+    z-index: 2
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba(0, 0, 0, .3)
+    display: none
+    align-items: center
+    justify-content: center
+    &--open
+        display: flex
+    &__content
+        background-color: #fff
+        display: inline-block
+        max-width: 603px
+        border-radius: 10px
+        position: relative
+    &__close
+        position: absolute
+        right: 20px
+        background-color: transparent
+        border: 0px
+        cursor: pointer
+        font-size: 20px
+        top: 10px
+.thanks
+    display: flex
+    text-align: center
+    padding: 40px 60px
+    box-shadow: 0px 4px 7px rgba(121, 126, 147, 0.06)
+    border: 1px solid #CBD0E8
+    border-radius: 10px
+    justify-content: center
+    &__inner
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+    &__title
+        font-size: 32px
+        color: #007FEA
+        font-weight: 700
+        margin-bottom: 30px
+    &__subtitle
+        font-size: 18px
+        font-weight: 500
+        margin-bottom: 26px
+    &__img
+        max-width: 370px
+
+@media screen and (max-width: 1208px)
+    .container
+        max-width: 100%
+        padding: 0 15px
+@media screen and (max-width: 968px)
+    .manual__inner
+        flex-wrap: wrap
+    .manual-content
+        margin: 0 auto
+    .manual-form
+        margin: 10px auto 0px
+    .manual
+        padding: 50px 0px
+    .main
+        height: 412px
+    .main__bg
+        top: 21%
+    .footer__inner
+        flex-wrap: wrap
+    .footer__inner
+        align-items: center
+        justify-content: center
+    .footer-data
+        text-align: center
+    .footer-info
+        text-align: center
+        margin-bottom: 20px
+    .footer
+        padding: 40px 0px
+@media screen and (max-width: 592px)
+    .main__title
+        margin: 9px 0px 14px
+        font-size: 36px
+    .main__subtitle
+        font-size: 19px
+    .main__link
+        display: none
+    .manual-content__title
+        font-size: 28px
+    .manual-content__list
+        margin-top: 0px
+    .warning__title
+        font-size: 28px
+    .questions__title
+        font-size: 36px
+    .questions__subtitle
+        font-size: 16px
+        margin-bottom: 20px
+    .questions
+        padding: 40px 0px
+    .header-content
+        display: none
+    .main
+        margin-top: 30px
+    .manual-form
+        min-width: auto
+        max-width: 100%
+    .form
+        padding: 20px 
+    .form__title
+        font-size: 28px
+    .list__item 
+        font-size: 16px
+        margin-top: 18px
+    .list
+        flex-direction: column
+    .warning
+        padding: 19px 15px
+    .header-info
+        align-items: center
+    .main
+        height: 109vw
+        padding-bottom: 0px
+    .main__bg
+        display: none
+    .form__btn
+        margin-top: 20px
+    .modal
+        background-color: #fff
+@media screen and (max-width: 400px)
+    .main__title
+        font-size: 28px
+    .main
+        height: 402px
+        padding-bottom: 0px
+@media screen and (max-width: 330px)
+    .main
+        height: 442px
+        padding-bottom: 0px
