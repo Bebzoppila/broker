@@ -1,7 +1,7 @@
-import  { FC, useEffect, useRef } from "react"
+import  { FC, useRef } from "react"
 import FormThanks from "./FormThanks"
 import send from "../api/sendToBack"
-
+import useBackClick from "../hooks/useBackClick"
 type ModalProps = {
     closeModal: () => void
 }
@@ -9,25 +9,11 @@ type ModalProps = {
 const Modal: FC<ModalProps> = ({ closeModal }) => {
     const modalContent = useRef<HTMLDivElement>(null);
 
+    useBackClick(modalContent, () => closeModal())
+    
     const sendToBack = (formData: string) => {
         send(formData)
     }
-
-    const checkPath = (event: MouseEvent) => {
-        const path = event.composedPath() as Array<HTMLElement>
-
-        if (modalContent.current) {
-            if (!path.includes(modalContent.current)) {
-                closeModal()
-            }
-        }
-    }
-
-
-    useEffect(() => {
-        document.addEventListener('click', checkPath)
-        return () => { document.removeEventListener('click', checkPath) }
-    }, [])
 
     return (
         <div className={"modal modal--open"}>
@@ -35,7 +21,6 @@ const Modal: FC<ModalProps> = ({ closeModal }) => {
                 <button onClick={() => closeModal()} className="modal__close">X</button>
                 {
                     <FormThanks sendToBack={sendToBack} thanksImg="/images/thanksscales.png" />
-
                 }
             </div>
         </div>

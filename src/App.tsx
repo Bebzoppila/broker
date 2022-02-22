@@ -5,23 +5,15 @@ import Main from "./components/Main";
 import Manual from "./components/Manual";
 import Questions from "./components/Questions";
 import Footer from "./components/Footer";
-
+import useModal from "./hooks/useModal";
 function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false) 
-
-  const closeModal = () => {
-    setModalIsOpen(false)
-  }
-
-  const openModal = () => {
-    setModalIsOpen(true)
-  }
+  const { modalState, closeModal, openModal } = useModal()
 
   return (
     <div className="App">
       <Header />
       {
-        modalIsOpen && <Modal closeModal={closeModal} />
+        modalState && <Modal closeModal={closeModal} />
       }
       <Main openModal={openModal} />
       <Manual />

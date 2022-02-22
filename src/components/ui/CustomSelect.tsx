@@ -1,5 +1,4 @@
 import { FC, useState } from "react"
-
 type CustomSelectProps = {
     options: Array<string>,
     defaultSelect: string,
@@ -36,5 +35,6 @@ const CustomSelect: FC<CustomSelectProps> = ({ defaultSelect, options, updateFor
         </div>
     )
 }
+
 
 export default CustomSelect

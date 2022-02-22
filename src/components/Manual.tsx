@@ -1,5 +1,4 @@
 import FormThanks from "./FormThanks"
-import Form from "./Form"
 const Manual = () => {
 
 
@@ -28,14 +27,6 @@ const Manual = () => {
                 </div>
                 <div className="manual-form">
                     <FormThanks thanksImg="/images/thanksnotepad.png" sendToBack={sendToBack} />
-                    {/* <Form sendToBack={sendToBack} /> */}
-                    {/* <!-- <div className="thanks">
-                        <div className="thanks__inner">
-                            <h2 className="thanks__title">Спасибо!</h2>
-                            <h3 className="thanks__subtitle">Ожидайте инструкцию и звонок от специалиста</h3>
-                            <img className="thanks__img" src="./src/images/thanksnotepad.png" alt="Картинка спасибо">
-                        </div>
-                    </div> --> */}
                 </div>
             </div>
         </div>

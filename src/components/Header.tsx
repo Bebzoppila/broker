@@ -8,7 +8,7 @@ const Header = () => {
         <div className="container">
             <div className="header__inner">
                 <div className="header-info">
-                    <img src="./images/logo.png" alt="Логотип" />
+                    <a className="header-info__link" href=""><img src="./images/logo.png" alt="Логотип" /></a>
                     <div className="header-info__text">
                         <h2 className="header-info__title">Анти-брокер</h2>
                         <strong className="header-info__subtitle">Бесплатная помощь обманутым инвесторам с 2011 года</strong>

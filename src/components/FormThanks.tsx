@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
-import Form from "./Form"
-import Thanks from "./Thanks"
+import Form from "./ui/Form"
+import Thanks from "./ui/Thanks"
 
 type FormThanksProps = {
     sendToBack: (text: string) => void,
