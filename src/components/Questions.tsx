@@ -7,7 +7,7 @@ type QuestionsProps = {
 const Questions:FC<QuestionsProps> = ({ openModal }) => {
 
     return(
-        <section className="questions">
+        <aside className="questions">
         <div className="container">
             <div className="questions__inner">
                 <h2 className="questions__title">Остались вопросы?</h2>
@@ -15,7 +15,7 @@ const Questions:FC<QuestionsProps> = ({ openModal }) => {
                 <button onClick={() => openModal()} className="btn questions__btn">Записаться на консультацию</button>
             </div>
         </div>
-    </section>
+    </aside>
     )
 }
 
