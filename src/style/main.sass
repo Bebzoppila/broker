@@ -421,20 +421,39 @@ img
     .header-info
         align-items: center
     .main
-        height: 109vw
-        padding-bottom: 0px
+        max-height: 100%
+        padding-bottom: 13px
     .main__bg
         display: none
     .form__btn
         margin-top: 20px
     .modal
         background-color: #fff
-@media screen and (max-width: 400px)
-    .main__title
-        font-size: 28px
+@media screen and (min-height: 2164px)
+    .footer
+        position: absolute
+        bottom: 0px
+        left: 0
+        right: 0px
+@media screen and (max-width: 470px)
     .main
-        height: 402px
-        padding-bottom: 0px
+        height: 100%
+        padding-bottom: 13px
+    .main__title
+        font-size: 26px
+        line-height: 30px
+    .main__subtitle
+        font-size: 16px
+        line-height: 19px
+    .manual-content__title
+        font-size: 22px
+    .form__title
+        font-size: 22px
+        text-align: left
+    .questions__title
+        font-size: 26px
+    .footer-data__phone
+        font-size: 25px
 @media screen and (max-width: 330px)
     .main
         height: 442px

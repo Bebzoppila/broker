@@ -3,18 +3,21 @@ import { FC, FormEvent, useState } from "react"
 import CustomSelect from "./CustomSelect"
 import FormItem from "./FormItem";
 import FormPhone from "./FormPhone";
-
+import useForm from "../../hooks/useForm";
 const selectOptions = ['менее 500$', 'от 500$ до 1500$', 'более 1500$ рублей']
 type FormProps = {
     sendToBack: (formData: string) => void
 }
-
+type formState = {
+    name: string,
+    sum: string,
+    phone: string
+}
 const Form: FC<FormProps> = ({ sendToBack }) => {
-    const [formState, setFormState] = useState({ name: '', sum: 'менее 500 $', phone: '' });
-
-    const updateFormState = (key: keyof typeof formState, newText: string) => {
-        setFormState({ ...formState, [key]: newText })
-    }
+    const {
+        formState,
+        updateFormState
+    } = useForm<formState>({ name: '', sum: 'менее 500 $', phone: '' })
 
     const isValid = () => {
         return /.../.test(formState.name) && /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(formState.phone)
